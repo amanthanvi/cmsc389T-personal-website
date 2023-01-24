@@ -14,6 +14,6 @@ jobs:
            password: ${{ secrets.PASSWORD }}
            port: ${{ secrets. PORT }}
            script: |
-             cd /pub/athanvi
+             cd /pub/$username
              unalias rm
              rm -rf cmsc389T-personal-website
