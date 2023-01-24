@@ -1,5 +1,5 @@
 # Use the node:10-alpine image
-FROM nginx:10-alpine
+FROM node:10-alpine
 
 # Create a directory for the app and its node_modules with node as its owner
 RUN mkdir -p /home/node/app && chown -R node:node /home/node/app
