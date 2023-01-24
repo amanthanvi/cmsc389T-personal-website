@@ -3,6 +3,12 @@ version: '3'
 services:
   nodejs:
     #fill out the configuration here
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nodejs
+    container_name: nodejs
+    restart: unless-stopped
     networks:
       - app-network
   
@@ -13,7 +19,7 @@ services:
     container_name: webserver
     restart: unless-stopped
     ports:
-      - "80"
+      - "80:80"
     volumes:
       - web-root:/var/www/html
       - ./nginx-conf:/etc/nginx/conf.d
@@ -28,7 +34,7 @@ volumes:
     driver_opts:
       type: none
       #fill out your absolute path to your folder here
-      device: /absolute/path/to/web/template/folder
+      device: "C:/Users/amant/Documents/Git Repos/CMSC388T/cmsc389T-personal-website/"
       o: bind
 
 networks:
