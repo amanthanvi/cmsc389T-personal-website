@@ -34,7 +34,7 @@ volumes:
     driver_opts:
       type: none
       #fill out your absolute path to your folder here
-      device: "C:/Users/amant/Documents/Git Repos/CMSC388T/cmsc389T-personal-website/"
+      device: /mnt/c/Users/amant/Documents/Git Repos/CMSC388T/cmsc389T-personal-website
       o: bind
 
 networks:
